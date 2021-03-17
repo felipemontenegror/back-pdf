@@ -18,8 +18,8 @@ const handlerRaiz = (req, res, next) => {
 }
 
 app.get('/', handlerRaiz)
-app.get('/curriculo', curriculoController.get)
-
+app.get('/curriculo', curriculoController.CurriculoGet) // rota, importacao de módulo, atributo Curriculoget do controller
+app.post('/curriculo', curriculoController.CurriculoPost)
 
 app.listen(PORT, () => {
     console.log(`running on port http://localhost:${PORT}`)
